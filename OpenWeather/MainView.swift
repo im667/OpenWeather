@@ -10,7 +10,14 @@ import SnapKit
 
 class MainView: UIView,BaseViewRepresentable {
     
-    
+    let getWeatherButton : UIButton = {
+        let i = UIButton()
+   
+        i.setTitle("날씨가져오기", for: .normal)
+        
+        
+       return i
+    }()
     func setupView() {
         <#code#>
     }
