@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CA371C27ECBB0400D5E975 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA371B27ECBB0400D5E975 /* APIService.swift */; };
 		04D23EFE27EB5E650019B13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D23EFD27EB5E650019B13C /* AppDelegate.swift */; };
 		04D23F0027EB5E650019B13C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D23EFF27EB5E650019B13C /* SceneDelegate.swift */; };
 		04D23F0227EB5E650019B13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D23F0127EB5E650019B13C /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04CA371B27ECBB0400D5E975 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		04D23EFA27EB5E650019B13C /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D23EFD27EB5E650019B13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D23EFF27EB5E650019B13C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				04D23EFF27EB5E650019B13C /* SceneDelegate.swift */,
 				04D23F0127EB5E650019B13C /* ViewController.swift */,
 				04D23F1127EB5EE40019B13C /* MainView.swift */,
+				04CA371B27ECBB0400D5E975 /* APIService.swift */,
 				04D23F1627EB5F390019B13C /* BaseViewRepresentable.swift */,
 				04D23F0327EB5E650019B13C /* Main.storyboard */,
 				04D23F0627EB5E670019B13C /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				04D23F1727EB5F390019B13C /* BaseViewRepresentable.swift in Sources */,
 				04D23EFE27EB5E650019B13C /* AppDelegate.swift in Sources */,
 				04D23F0027EB5E650019B13C /* SceneDelegate.swift in Sources */,
+				04CA371C27ECBB0400D5E975 /* APIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
