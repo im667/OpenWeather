@@ -29,6 +29,7 @@ class MainView: UIView,BaseViewRepresentable {
         let i = UITextField()
         i.placeholder = "ex:seoul"
         i.sizeToFit()
+        i.textAlignment = .center
         i.textColor = .darkGray
         i.font = UIFont.systemFont(ofSize: 25)
         return i
