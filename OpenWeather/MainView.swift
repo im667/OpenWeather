@@ -27,11 +27,22 @@ class MainView: UIView,BaseViewRepresentable {
     
     let cityTextField: UITextField = {
         let i = UITextField()
-        i.text = "seoul"
+        i.placeholder = "ex:seoul"
         i.sizeToFit()
         i.textColor = .darkGray
         i.font = UIFont.systemFont(ofSize: 25)
         return i
+    }()
+    
+    let cityNameLabel: UILabel = {
+       let i = UILabel()
+        i.text = "Example"
+        i.sizeToFit()
+        i.textColor = .darkGray
+        i.font = UIFont.systemFont(ofSize: 25)
+        i.isHidden = true
+        return i
+        
     }()
     
     let weatherLabel: UILabel = {
@@ -96,7 +107,7 @@ class MainView: UIView,BaseViewRepresentable {
             maxMinTemperStackView.addArrangedSubview($0)
         }
         
-        [cityTextField,weatherLabel,temperaturesLabel,maxMinTemperStackView].forEach{
+        [cityTextField,cityNameLabel,weatherLabel,temperaturesLabel,maxMinTemperStackView].forEach{
             stackView.addArrangedSubview($0)
         }
         
