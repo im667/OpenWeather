@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
  
-    
     let mainView = MainView()
     
     override func loadView() {
@@ -20,9 +19,31 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        mainView.getWeatherButton.addTarget(self, action: #selector(clickedWeatherButton), for: .touchUpInside)
     }
 
 
+    @objc func clickedWeatherButton(){
+        if let cityName = mainView.cityTextField.text {
+            self.getweather(city: cityName)
+            self.mainView.endEditing(true)
+            mainView.maxMinTemperStackView.isHidden = false
+            mainView.temperaturesLabel.isHidden = false
+            mainView.weatherLabel.isHidden = false
+        }
+    }
+    
+    
+    func getweather(city:String) {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(APIService.key)") else { return }
+        let session = URLSession(configuration: .default)
+            session.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            let decoder = JSONDecoder()
+            let weatherInformation = try? decoder.decode(Weather.self, from: data)
+                debugPrint(weatherInformation ?? "")
+        }.resume()
+    }
+    
 }
 
